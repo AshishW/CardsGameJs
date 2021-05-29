@@ -142,6 +142,7 @@
 
       // create highscore element and using local storage to store it and update it
       //styling of game: grid positioning layout etc.
+      //theme option on .singleCard using the colour classes, red, green, etc
   
 
   //            done
