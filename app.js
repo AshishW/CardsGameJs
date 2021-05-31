@@ -16,10 +16,15 @@
 /*<<<< for cards emoji >>>>> */  
   let items = document.querySelectorAll(".item"); //the animal faces
   const itemsArray = ["🐰","🐰","🐯","🐯","🦁","🦁","🦄","🦄","🐼","🐼","🦊","🦊"];
-  let randomItemsArray = itemsArray.sort(function(a, b){return 0.5 - Math.random()}); //gives random emojis from itemsArray
-  items.forEach((emoji,i)=>{
-    emoji.textContent=randomItemsArray[i];
-  })
+  
+  const sortEmoji = (itemsArray) =>{
+    let randomItemsArray = itemsArray.sort(function(a, b){return 0.5 - Math.random()}); //gives random emojis from itemsArray
+    items.forEach((emoji,i)=>{
+      return emoji.textContent=randomItemsArray[i];
+    })
+  }
+  sortEmoji(itemsArray);
+
 /*<<<< for cards emoji >>>>> */                       
 
   //Game Logic:
@@ -122,7 +127,7 @@
     completed=0;
     displayMoves.textContent = 0;
     restartButton.classList.toggle("showButton");
-
+    sortEmoji(itemsArray);
   }
 
     //  location.reload(); 
