@@ -48,8 +48,10 @@
     cardBack.classList.toggle("visible");
      console.log(flag);
      if(currentCard===clickedCard && !flag){
-      card.style.border='2px solid blue'
-      preCard.style.border='2px solid blue'
+      card.classList.toggle('yellow');
+      preCard.classList.toggle('yellow');
+      card.style.border='1px solid blue'
+      preCard.style.border='1px solid blue'
       flag=true;
       completed++
     }
@@ -59,7 +61,7 @@
     }
     
     else if(currentCard!==clickedCard && totalCards>1){
-      if(!flag && preCard.style.border!=='2px solid blue'){
+      if(!flag && preCard.style.border!=='1px solid blue'){
       preCard.classList.toggle("fun");
       preCardFront.classList.toggle("showFrontCard");
       preCardBack.classList.toggle("visible");
@@ -94,9 +96,9 @@
     if(completed<6 
       && 
       (
-        (card.style.border!=='2px solid blue' && (card===sameCard && totalCards%2===0 && totalCards!==1))
+        (card.style.border!=='1px solid blue' && (card===sameCard && totalCards%2===0 && totalCards!==1))
         ||
-        (card.style.border!=='2px solid blue' && card!==sameCard) 
+        (card.style.border!=='1px solid blue' && card!==sameCard) 
            || totalCards<1)
       ){
       sameCard = card;
@@ -113,6 +115,7 @@
       cardFront.classList.toggle("showFrontCard");
       cardBack.classList.toggle("visible");
       card.style.border='none';
+      card.classList.toggle('yellow')
     })
     gameCompleted=false;
     moves = 0;

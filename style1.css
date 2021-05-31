@@ -1,19 +1,35 @@
 html, body{
     height: fit-content;
-    /* background-color: #fdc6c6; */
+    background: url('https://cdn.pixabay.com/photo/2017/09/05/08/33/cartoon-2716788_1280.jpg') no-repeat fixed center center;
+    background-size: cover;
     text-align: center;
  
  
     /* to remove the blue outline in mobile view */
-    -webkit-tap-highlight-color: transparent;  
+    -webkit-tap-highlight-color: transparent; 
+    
+    /* to make text non selectable */
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */  
 }
+h1{
+  font-weight: bold;
+  /* text-shadow: 2px 2px 8px #ffffff; */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .container{
     margin: 0;
     display: flex;
     width:fit-content;
     flex-wrap: wrap;
     justify-content: center;
-    border: 5px solid black;
+    background-color: rgba(255, 255, 255, 0.164);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border: 1px solid rgba(255, 255, 255, 0.164) ;
+    border-radius: 10px;
 }
 @media screen and (min-width: 750px) { /*big screen*/
     .container{
@@ -22,7 +38,7 @@ html, body{
         width: 50%;
         flex-wrap: wrap;
         justify-content: center;
-        border: 5px solid black;
+        /* border: 5px solid black; */
     }
     .bigContainer{
         height: fit-content;
@@ -65,7 +81,7 @@ html, body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #4096ee;
+  background-color: #4097eec2;
   transition: transform 0.3s;
 }
 
@@ -91,10 +107,18 @@ html, body{
 #menu{
     display: flex;
     position: relative;
-    height: 5rem;
+    height: 4rem;
+    margin-bottom:1rem ;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    /* styling glassmorphism */
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 #menu h2{
     margin: 0;
@@ -130,7 +154,7 @@ html, body{
     text-align: center;
     font-size:7vw;
     border-radius:4px;
-    border:1px solid #bbb;
+    /* border:1px solid #bbb; */
     transition: all 0.3s linear;
 }
 
