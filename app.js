@@ -12,7 +12,37 @@
   let gameCompleted = false;
   let restartButton = document.querySelector('.restart');
 
+  // time elapsed:
   
+  const min = document.querySelector('.min');
+  const sec = document.querySelector('.sec');
+  let totalSeconds = 0;
+  let interval = setInterval(setTime, 1000);
+
+  function setTime() {
+  ++totalSeconds;
+  sec.textContent = pad(totalSeconds % 60);
+  min.textContent = pad(parseInt(totalSeconds / 60));
+}
+
+function pad(val) {
+  let valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
+}
+
+function resetCounter(){
+  sec.textContent = '00';
+  min.textContent = '00';
+  totalSeconds = 0;
+  interval = setInterval(setTime, 1000);
+}
+
+
+
 /*<<<< for cards emoji >>>>> */  
   let items = document.querySelectorAll(".item"); //the animal faces
   const itemsArray = ["🐰","🐰","🐯","🐯","🦁","🦁","🦄","🦄","🐼","🐼","🦊","🦊"];
@@ -93,11 +123,12 @@
        setTimeout(()=>{
         alert("congratulations!! You Won!");
        },500)
+       clearInterval(interval); //stops the time counter
     }
     // card.style.transform='rotate(60deg)' //this line is working
   }
   cards.forEach(card=>card.addEventListener('click', ()=>{   //event listner for card click
-     console.log(card)
+    console.log(card)
     if(completed<6 
       && 
       (
@@ -113,27 +144,24 @@
 
   const restart = () =>{
     if(gameCompleted){ 
-    cards.forEach(card=>{//toggles all cards if game is completed
-      let cardBack = card.querySelector('.initialCard');
-      let cardFront = card.querySelector('.card_back');
-      card.classList.toggle("fun"); 
-      cardFront.classList.toggle("showFrontCard");
-      cardBack.classList.toggle("visible");
-      card.style.border='none';
-      card.classList.toggle('yellow')
-    })
-    gameCompleted=false;
-    moves = 0;
-    completed=0;
-    displayMoves.textContent = 0;
-    restartButton.classList.toggle("showButton");
-    sortEmoji(itemsArray);
-  }
-
-    //  location.reload(); 
-    //  return false;
-    
-  
+      cards.forEach(card=>{//toggles all cards if game is completed
+        let cardBack = card.querySelector('.initialCard');
+        let cardFront = card.querySelector('.card_back');
+        card.classList.toggle("fun"); 
+        cardFront.classList.toggle("showFrontCard");
+        cardBack.classList.toggle("visible");
+        card.style.border='none';
+        card.classList.toggle('yellow')
+      })
+      gameCompleted=false;
+      moves = 0;
+      completed=0;
+      displayMoves.textContent = 0;
+      restartButton.classList.toggle("showButton");
+      sortEmoji(itemsArray);
+      totalSeconds = 0;
+      resetCounter(); //resets and starts the time counter
+    }
   }
 
 
@@ -141,18 +169,21 @@
 
 
   //            inProgress
-      //creating a time counter
+      
+      // create highscore element and using local storage to store it and update it
+      
 
 
 
 
   //            tasks
 
-      // create highscore element and using local storage to store it and update it
       //styling of game: grid positioning layout etc.
+      //creating a modal that shows the score and time elapsed in it after the game completes
       //theme option on .singleCard using the colour classes, red, green, etc
-  
+      //make the counter good by extracting it to function so it avoids global declaations
 
   //            done
 
      //finding different way to restart the game 
+     //creating a time counter
