@@ -57,8 +57,25 @@ function resetCounter(){
 
 /*<<<< for cards emoji >>>>> */                       
 
-  //Game Logic:
 
+
+// MODAL ON GAME COMPLETION:
+ let modal = document.querySelector('.modal');
+//  const closeModal = document.querySelector('.modal_nav_button');
+ let modal_totalMoves = document.querySelector('.modal_totalMoves');
+ let modal_totalTime = document.querySelector('.modal_totalTime');
+
+const displayModal = () =>{
+  modal.classList.toggle('show_modal');
+}
+
+const closeModal = () =>{
+  modal.classList.toggle('show_modal');
+}
+
+
+
+  //Game Logic:
   if(moves===0){
     displayMoves.textContent='0';
   }
@@ -120,9 +137,12 @@ function resetCounter(){
      if(completed === 6){ //on game completion
        gameCompleted = true;
        restartButton.classList.toggle("showButton");
-       setTimeout(()=>{
-        alert("congratulations!! You Won!");
-       },500)
+       modal_totalMoves.textContent = moves;
+       modal_totalTime.textContent = `${min.textContent}:${sec.textContent}`;
+       displayModal(); //displays modal
+      //  setTimeout(()=>{
+      //   alert("congratulations!! You Won!");
+      //  },500)
        clearInterval(interval); //stops the time counter
     }
     // card.style.transform='rotate(60deg)' //this line is working

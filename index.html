@@ -8,6 +8,8 @@
 </head>
 <body>
   <h1>Memory Game</h1>
+
+  <!-- MENU -->
   <div id="menu">
     <h2>Moves:<span></span></h2>
     <div class="timeElapsed">
@@ -16,11 +18,13 @@
     <!-- <h2 class = highScore></h2> -->
     <button onclick="restart()" class="restart">Restart🔄</button>
   </div>
+
+  <!-- CARDS CONTAINER GRID -->
   <div class="bigContainer">
   <section class="container">
     <div class="fox singleCard zone">
       <div class="card_back">
-        <div class="item ">🦊</div>
+        <div class="item "></div> <!--animal emoji -->
       </div>
       <div class="initialCard">
         <div>😀</div>
@@ -28,7 +32,7 @@
     </div>
     <div class="fox singleCard zone">
       <div class="card_back">
-        <div class="item">🦊</div>
+        <div class="item"></div>
       </div>
       <div class="initialCard">
         <div>😀</div>
@@ -36,7 +40,7 @@
     </div>
     <div class="panda singleCard zone">
       <div class="card_back">
-        <div class="item">🐼</div>
+        <div class="item"></div>
       </div>
       <div class="initialCard">
         <div>😀</div>
@@ -44,7 +48,7 @@
     </div>
     <div class="horse singleCard zone">
       <div class="card_back">
-        <div class="item">🦄</div>
+        <div class="item"></div>
       </div>
       <div class="initialCard">
         <div>😀</div>
@@ -52,7 +56,7 @@
     </div>
     <div class="panda singleCard zone">
       <div class="card_back">
-        <div class="item">🐼</div>
+        <div class="item"></div>
       </div>
       <div class="initialCard">
         <div>😀</div>
@@ -60,7 +64,7 @@
     </div>
     <div class="horse singleCard zone">
       <div class="card_back">
-        <div class="item">🦄</div>
+        <div class="item"></div>
       </div>
       <div class="initialCard">
         <div>😀</div>
@@ -68,7 +72,7 @@
     </div>
     <div class="lion singleCard zone">
       <div class="card_back">
-        <div class="item ">🦁</div>
+        <div class="item "></div>
       </div>
       <div class="initialCard">
         <div>😀</div>
@@ -76,7 +80,7 @@
     </div>
     <div class="lion singleCard zone">
       <div class="card_back">
-        <div class="item">🦁</div>
+        <div class="item"></div>
       </div>
       <div class="initialCard">
         <div>😀</div>
@@ -84,7 +88,7 @@
     </div>
     <div class="tiger singleCard zone">
       <div class="card_back">
-        <div class="item">🐯</div>
+        <div class="item"></div>
       </div>
       <div class="initialCard">
         <div>😀</div>
@@ -92,7 +96,7 @@
     </div>
     <div class="tiger singleCard zone">
       <div class="card_back">
-        <div class="item">🐯</div>
+        <div class="item"></div>
       </div>
       <div class="initialCard">
         <div>😀</div>
@@ -100,7 +104,7 @@
     </div>
     <div class="rabbit singleCard zone">
       <div class="card_back">
-        <div class="item">🐰</div>
+        <div class="item"></div>
       </div>
       <div class="initialCard">
         <div>😀</div>
@@ -108,24 +112,23 @@
     </div>
     <div class="rabbit singleCard zone">
       <div class="card_back">
-        <div class="item">🐰</div>
+        <div class="item"></div>
       </div>
       <div class="initialCard">
         <div>😀</div>
       </div>
     </div>
-
-    <!-- <div id="zone" class="zone red">🐰</div>
-    <div id="zone" class="zone blue">🐸</div>
-    <div id="zone" class="zone yellow">🦁</div>
-    <div id="zone" class="zone purple">🐯</div>
-    <div id="zone" class="zone brown">🐭</div>
-    <div id="zone" class="zone green">🦄</div>
-    <div id="zone" class="zone red">🐲</div>
-    <div id="zone" class="zone blue">🐷</div>
-    <div id="zone" class="zone yellow">🐺</div>
-    <div id="zone" class="zone purple">🐼</div>
-    <div id="zone" class="zone brown">🐻</div> -->
+        <!-- GAME COMPLETE MODAL  -->
+        <div class="modal">
+          <div class="modal_nav">
+            <button onclick="closeModal()" class="modal_nav_button">X</button>
+          </div>
+          <h1>You Won the game!!!</h1>
+          <hr/>
+          <h1>Score:</h1>
+          <p>moves:<span class="modal_totalMoves"></span></p>
+          <p>time:<span class="modal_totalTime"></span></p>
+        </div>
   </section>
   </div>
   <script src="app.js"></script>

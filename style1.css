@@ -17,8 +17,13 @@ h1{
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+/* .bigContainer{
+    position: relative;
+    height: fit-content;
+    width: 100%;
+} */
 .container{
+    position: relative;
     margin: 0;
     height: fit-content;
     display: grid;
@@ -147,7 +152,7 @@ h1{
 }
 
 .zone.fun{
-    /* transition: transform 1s; */
+    /* transition: transform 1s;*/
     transform: rotateY(180deg);
 }
 
@@ -158,6 +163,43 @@ h1{
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
 
+/* MODAL */
+.modal{
+    visibility: hidden;
+    position: absolute;
+    width: 60%;
+    height: fit-content;
+    background:rgb(165, 230, 255);
+    border: 2px solid black;
+    border-radius: 5px;
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 50px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 50px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 50px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 50px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.show_modal{
+     visibility: visible;
+}
+
+.modal_nav{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 5px;
+}
+
+.modal_nav_button{
+    height: 50px;
+    width: 50px;
+    font-weight: bold;
+    font-size: 2vw;
+    background-color: #a5c956;
+    cursor: pointer;
+}
+
+.modal_nav_button:hover{
+    background-color: #ee84f8;
+}
 .green{
     background: #56B870; /* Old browsers */
     background: -moz-linear-gradient(top, #56B870 0%, #a5c956 100%); /* FF3.6+ */
