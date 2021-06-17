@@ -92,9 +92,8 @@ const closeModal = () =>{
     
     totalCards++;
      console.log(totalCards)
-     console.log(card.classList[0]);
+    //  console.log(card.classList[0]);
     let currentCard = card.textContent;
-    
     card.classList.toggle("fun"); 
     cardFront.classList.toggle("showFrontCard");
     cardBack.classList.toggle("visible");
