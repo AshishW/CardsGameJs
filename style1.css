@@ -165,7 +165,7 @@ h1{
 
 /* MODAL */
 .modal{
-    /* visibility: hidden; */
+    visibility: hidden;
     position: absolute;
     width: 60%;
     height: fit-content;
