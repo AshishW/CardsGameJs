@@ -165,13 +165,19 @@ h1{
 
 /* MODAL */
 .modal{
-    visibility: hidden;
+    /* visibility: hidden; */
     position: absolute;
     width: 60%;
     height: fit-content;
-    background:rgb(165, 230, 255);
+    font-weight: bold;
+    background: rgba(116, 195, 231, 0.15);
+    backdrop-filter: blur( 3.8px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba(3, 3, 3, 0.472);
+    /* background:rgb(165, 230, 255);
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 5px;*/
     -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 50px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 50px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 50px, inset rgba(0,0,0,0.15) 0px -10px 20px;
@@ -189,9 +195,8 @@ h1{
 }
 
 .modal_nav_button{
-    height: 50px;
-    width: 50px;
-    font-weight: bold;
+    height: fit-content;
+    width: fit-content;
     font-size: 2vw;
     background-color: #a5c956;
     cursor: pointer;
