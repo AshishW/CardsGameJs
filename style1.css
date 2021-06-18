@@ -170,7 +170,7 @@ h1{
     width: 60%;
     height: fit-content;
     font-weight: bold;
-    background: rgba(116, 195, 231, 0.15);
+    background: rgba(116, 195, 231, 0.445);
     backdrop-filter: blur( 3.8px );
     -webkit-backdrop-filter: blur( 3.5px );
     border-radius: 10px;
@@ -183,9 +183,11 @@ h1{
     -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 50px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     box-shadow:rgba(0,0,0,0.8) 0px 5px 50px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
-
 .show_modal{
      visibility: visible;
+}
+.modal hr{
+    border-color: rgb(127, 219, 255);
 }
 
 .modal_nav{
@@ -203,7 +205,7 @@ h1{
 }
 
 .modal_nav_button:hover{
-    background-color: #ee84f8;
+    background-color: #fcb430;
 }
 .green{
     background: #56B870; /* Old browsers */
